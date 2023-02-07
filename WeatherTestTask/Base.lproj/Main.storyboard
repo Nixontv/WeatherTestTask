@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial1 View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial1" id="BYZ-38-t0r" customClass="Tutorial1ViewController" customModule="WeatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial Screen 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-sQ-9cu">
+                                <rect key="frame" x="113.66666666666669" y="408.33333333333331" width="163" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70f-Mr-sqg">
+                                <rect key="frame" x="165" y="683" width="60" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xm-pd-1E7"/>
+                                    <segue destination="Ysd-8n-tOC" kind="show" identifier="toTutorial2" id="cCE-ut-qyy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wGS-sQ-9cu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0aE-XE-OjO"/>
+                            <constraint firstItem="wGS-sQ-9cu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VUP-Zh-z1H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="70f-Mr-sqg" secondAttribute="bottom" constant="92" id="Wd2-Wg-Duu"/>
+                            <constraint firstItem="70f-Mr-sqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aDi-Lb-u3D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="70f-Mr-sqg" id="G8W-2v-fL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80" y="-2"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="eqb-6I-FLe">
+            <objects>
+                <viewController storyboardIdentifier="Loading" id="AQV-8c-5L1" customClass="LoadingViewController" customModule="WeatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPN-iX-lNy">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHj-Tg-4Pf">
+                                <rect key="frame" x="117.66666666666667" y="408" width="154.66666666666663" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zhP-Kd-7bc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sHj-Tg-4Pf" firstAttribute="centerX" secondItem="kPN-iX-lNy" secondAttribute="centerX" id="C4w-2b-taW"/>
+                            <constraint firstItem="sHj-Tg-4Pf" firstAttribute="centerY" secondItem="kPN-iX-lNy" secondAttribute="centerY" id="URe-Lc-cUq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1is-Ut-O8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="-656"/>
+        </scene>
+        <!--Tutorial2 View Controller-->
+        <scene sceneID="Oqf-eb-XHK">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial2" modalPresentationStyle="fullScreen" id="Ysd-8n-tOC" customClass="Tutorial2ViewController" customModule="WeatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqk-sK-PfU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial Screen 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2R-2c-nXR">
+                                <rect key="frame" x="112" y="408.33333333333331" width="166" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgc-gf-WpS">
+                                <rect key="frame" x="172" y="683" width="46" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ok"/>
+                                <connections>
+                                    <segue destination="N6T-RR-YdX" kind="show" id="HlF-vw-5La"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YUe-Zi-rwp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jgc-gf-WpS" firstAttribute="centerX" secondItem="hqk-sK-PfU" secondAttribute="centerX" id="0Mw-AQ-13Z"/>
+                            <constraint firstItem="YUe-Zi-rwp" firstAttribute="bottom" secondItem="Jgc-gf-WpS" secondAttribute="bottom" constant="92" id="0iA-9v-BJi"/>
+                            <constraint firstItem="I2R-2c-nXR" firstAttribute="centerY" secondItem="hqk-sK-PfU" secondAttribute="centerY" id="LVS-DV-0uZ"/>
+                            <constraint firstItem="I2R-2c-nXR" firstAttribute="centerX" secondItem="hqk-sK-PfU" secondAttribute="centerX" id="qbi-nN-Nmn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CFT-Lo-2EO"/>
+                    <connections>
+                        <outlet property="okButton" destination="Jgc-gf-WpS" id="KV9-JQ-GyS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwa-cK-Mdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.92307692307691" y="-2.1327014218009479"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="6Ed-oX-0v2">
+            <objects>
+                <viewController storyboardIdentifier="Weather" modalPresentationStyle="fullScreen" id="N6T-RR-YdX" customClass="WeatherViewController" customModule="WeatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ojB-JA-7EV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyv-8I-zbe">
+                                <rect key="frame" x="115.66666666666669" y="137" width="159" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35 degrees in Minsk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ3-rp-fb6">
+                                <rect key="frame" x="94.666666666666686" y="408" width="201" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UZF-tY-5iT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dyv-8I-zbe" firstAttribute="centerX" secondItem="ojB-JA-7EV" secondAttribute="centerX" id="5kH-yO-FqY"/>
+                            <constraint firstItem="BJ3-rp-fb6" firstAttribute="centerX" secondItem="ojB-JA-7EV" secondAttribute="centerX" id="bbz-5T-HOj"/>
+                            <constraint firstItem="BJ3-rp-fb6" firstAttribute="centerY" secondItem="ojB-JA-7EV" secondAttribute="centerY" id="c46-zu-GYS"/>
+                            <constraint firstItem="dyv-8I-zbe" firstAttribute="top" secondItem="UZF-tY-5iT" secondAttribute="top" constant="90" id="n8o-pg-jLe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ii6-AK-aJm"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="BJ3-rp-fb6" id="hLy-J9-kgQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmh-8z-8S2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
